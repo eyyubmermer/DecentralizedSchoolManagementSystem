@@ -85,10 +85,6 @@ export function bringStudent(id: u32): Student {
 }
 
 
-export function readStudent(): Student[] {
-  return Student.readAnStudent();
-}
-
 
 export function deleteStudent(id: u32): void {
   logging.log("Student's account has been deleted!");
@@ -195,11 +191,7 @@ export class Student {
         return student;
     }
 
-    static readAnStudent(): Student[] {
-        let start: u32 = 0;
-        logging.log("You can donate to an Advertisingman using 'sendGratitude' function!");
-        return students.values(start, students.length);
-    }
+
 
     static deleteStudent(id: u32): void {
         const student = students.getSome(id);
