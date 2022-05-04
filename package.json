@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Start with a basic project",
   "scripts": {
-    "dev": "watch -d -n 1 'clear && yarn test'",
+    "deploy": "near dev-deploy build/release/simple.wasm",
+    "dev": "yarn build:release && yarn deploy",
     "test": "yarn asp -f unit.spec",
     "clean": "rm -rf ./build && rm -rf ./neardev",
     "build": "asb --target debug",
