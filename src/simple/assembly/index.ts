@@ -51,14 +51,8 @@ export function feePayment(id: u32, receiver: AccountId): Student {
 }
 
 
-// Take a Look to Archieve
 export function bringStudent(id: u32): Student {
   return Student.bringStudent(id);
-}
-
-
-export function readStudent(): Student[] {
-  return Student.readAnStudent();
 }
 
 
