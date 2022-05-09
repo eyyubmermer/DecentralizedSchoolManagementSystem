@@ -57,11 +57,6 @@ export function bringStudent(id: u32): Student {
 }
 
 
-export function readStudent(): Student[] {
-  return Student.readAnStudent();
-}
-
-
 export function deleteStudent(id: u32): void {
   logging.log("Student's account has been deleted!");
   Student.deleteStudent(id);
